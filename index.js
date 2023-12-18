@@ -1,18 +1,29 @@
- const { App } = require('@slack/bolt');
- const axios = require('axios');
+const { App } = require('@slack/bolt');
+const axios = require('axios');
+const express = require('express');
 
 require('dotenv').config();
+
 // Initializes your app with your bot token and signing secret
 const app = new App({
   token: process.env.BOT_TOKEN,
-
   signingSecret: process.env.SECRET_SIGNING_KEY
 });
 
-(async () => {
-  // Start your app
-  await app.start(process.env.PORT || 3003);
+// Create an Express app
+const expressApp = express();
 
+// Set up a default route to display a welcome message
+expressApp.get('/', (req, res) => {
+  res.send('Welcome to your Slack Bolt app!');
+});
+
+// Mount the Express app as a middleware to handle HTTP requests
+app.receiver.app.use(expressApp);
+
+// Start your app
+(async () => {
+  await app.start(process.env.PORT || 3003);
   console.log(`⚡️ Bolt app is running! ${process.env.PORT}`);
 })();
 
