@@ -1,0 +1,17 @@
+issues to resolve in the midterm
+
+   the excel trigger stoped working --- got some message the authroization has to be done  >>> Test in and make it perment
+
+	the depoloyment to azure webservice --- doesnt give any updates	>>> Test using ngrok for now.. or find anothe service platform
+
+	important --- try to document what you did..
+		 19/12/2023  -- i tried to solve the no response from azure website. i search stackoverflow to fix this didnt 
+				come with a solution. as usual i seem to loose track of where am i in the dvlpment
+				i need to try a seperate installation and from scratch to test azure as well
+				
+		googlesheet appscript stoped... when checked it seems to be having need to authorize.. after couple runing
+		atempt i got access and send me the slack meesage for the changed order.
+
+		one more thing was to keep an eye on the email to get notified about the errors or techniallity going on server die.
+
+		bothelp seemsto be workingfine as i have been paying them.

@@ -2,7 +2,7 @@
 node_modules/
 
 # Dependency directories
-package-lock.json
+#package-lock.json
 npm-debug.log
 yarn-error.log
 .pnpm/
